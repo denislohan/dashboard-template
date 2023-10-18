@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url("resources/body-bg.svg") no-repeat;
+    background-size: 100vw 100vh;
+}
+
+@media(max-width:1045px) {
+    body {
+        margin: 0;
+        background: url("resources/body-bg.svg") no-repeat;
+        background-size: auto 100vh;
+    }
+}
