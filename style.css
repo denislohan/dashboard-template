@@ -40,10 +40,7 @@ header#header {
     display: flex;
     justify-content: space-between;
     padding-top: 0.625rem;
-    /* padding-bottom: 0; */
 }
-
-#header .title-section {}
 
 #header .title-section h1 {
     padding-top: 0.2125rem;
