@@ -1,17 +1,263 @@
+@import url(https://db.onlinewebfonts.com/c/774a72961dd69f90a772237432b1623e?family=Averta-Semibold&family=Averta-Regular);
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --unit-height: 12.3px
+}
+
 body {
     margin: 0;
+    padding: 2.42rem 2.42rem 4.5rem 2.42rem;
     background: url("resources/body-bg.svg") no-repeat;
     background-size: 100vw 100vh;
+    display: grid;
+    grid-template-columns: 214fr 653fr 356fr;
+    grid-template-rows: 120fr 1230fr;
+    grid-template-areas: 'nav header header' 'nav main aside';
+    gap: 2.6rem;
+}
+
+#header {
+    grid-area: header;
+}
+
+#navbar {
+    grid-area: nav;
+    background: #fff;
+    border-radius: 10% 0 0 10%;
+}
+
+#aside {
+    grid-area: aside
+}
+
+
+/* Header */
+
+header#header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.625rem;
+    /* padding-bottom: 0; */
+}
+
+#header .title-section {}
+
+#header .title-section h1 {
+    padding-top: 0.2125rem;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0;
+    color: #15192C;
+    font-family: Averta-Semibold;
+    font-size: 28.155px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.563px;
+}
+
+#header .title-section p {
+    margin: 0;
+    color: #92959E;
+    font-family: Averta-Regular;
+    font-size: 0.7918rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#header .date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: auto 0; */
+}
+
+#header .date {}
+
+#header .date p {
+    padding: 0 1rem;
+    border: none;
+    color: #15192C;
+    font-family: Averta-Semibold;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#header .date-selector {
+    cursor: pointer;
+}
+
+
+/* Navigation */
+
+.nav-header {
+    width: 49%;
+    margin: 2.41rem auto 6.875rem auto;
+}
+
+.nav-header div {
+    float: left;
+}
+
+.nav-header .nav-name {
+    padding-left: 0.3rem;
+}
+
+.nav-header p {
+    margin-top: 0.5rem;
+    color: #551FFF;
+    text-align: center;
+    font-family: "Averta-Semibold";
+    font-size: 16.893px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.338px;
+}
+
+.side-link.profile {
+    clear: both;
+}
+
+.side-link {
+    display: flex;
+    justify-content: center;
+    margin: 1.1rem auto;
+    text-decoration: none;
+    width: 73%;
+    padding: 1.1rem 0 1.05rem 0.2rem;
+    text-align: center;
+    border-radius: 4.4rem;
+    background: #FFF;
+    font-family: "Averta-Regular";
+    font-size: 0.88rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.282px;
+}
+
+.side-link a {
+    flex: 2;
+    text-decoration: none;
+    color: #D0D2DA;
+    text-align: left;
+    cursor: pointer;
+}
+
+.side-link.billing a {
+    color: #551FFF;
+}
+
+.side-link div {
+    flex: 1;
+    width: 1rem;
+    height: auto;
+}
+
+.side-link img {
+    vertical-align: middle;
+    padding-left: 12px;
+}
+
+.side-link.billing {
+    background: #F3F0FF;
+}
+
+
+/* Contennt */
+
+#content {
+    grid-area: main;
+    /* border: 1px solid steelblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#content .top-numbers {
+    flex: 55;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 0.3rem;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    border-radius: 14.078px;
+    background: #FFF;
+    box-shadow: 0px 12.66981px 22.52411px 0px rgba(208, 210, 218, 0.15);
+}
+
+#content .stats-card {
+    width: 50%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3.5%;
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.stats-card p:nth-child(1) {
+    margin-bottom: 0.188rem;
+    color: #92959E;
+    font-family: AvertaStd-Bold;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.stats-card p:nth-child(2) {
+    margin-top: 0.188rem;
+    color: #15192C;
+    font-family: Averta-Regular;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.stats-card div:nth-child(1) {
+    border-radius: 11.2px;
+    padding: 1rem;
+    background: #FFF2E9;
+    opacity: 0.65;
+    line-height: 0;
+    font-size: 0;
+}
+
+.stats-card img {
+    vertical-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#content .graph {
+    flex: 316;
+}
+
+#content .graph img {
+    width: 100%;
+    height: auto;
 }
 
 @media(max-width:1045px) {
     body {
-        margin: 0;
-        background: url("resources/body-bg.svg") no-repeat;
         background-size: auto 100vh;
+    }
+    #content .top-numbers {
+        flex-wrap: wrap;
+    }
+    .side-link div {
+        display: none;
+    }
+    .side-link a {
+        text-align: center;
     }
 }
