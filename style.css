@@ -13,7 +13,7 @@ body {
     background: url("resources/body-bg.svg") no-repeat;
     background-size: 100vw 100vh;
     display: grid;
-    grid-template-columns: 214fr 653fr 356fr;
+    grid-template-columns: 214fr 661fr 350fr;
     grid-template-rows: 120fr 1230fr;
     grid-template-areas: 'nav header header' 'nav main aside';
     gap: 2.6rem;
@@ -190,11 +190,12 @@ header#header {
 }
 
 #content .stats-card {
-    width: 50%;
-    margin: auto;
+    /* width: 50%;
+    margin: auto; */
+    flex: 1;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 3.5%;
+    padding-left: 5%;
     display: inline-flex;
     gap: 0.5rem;
 }
