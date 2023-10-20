@@ -8,15 +8,27 @@
 }
 
 body {
-    margin: 0;
-    padding: 2.42rem 2.42rem 4.5rem 2.42rem;
-    background: url("resources/body-bg.svg") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background: url(resources/body-bg.svg) no-repeat;
     background-size: 100vw 100vh;
+    padding: 2.42rem 2.42rem 4.5rem 2.42rem;
+}
+
+.container {
+    /* background: url(resources/.container-bg.svg) no-repeat; */
+    background: #F8F9FC;
+    margin: 0;
+    max-height: 100%;
+    /* padding: 2.42rem 2.42rem 4.5rem 2.42rem; */
+    /* background: url("resources/.container-bg.svg") no-repeat;
+    background-size: 100vw 100vh; */
     display: grid;
     grid-template-columns: 214fr 661fr 350fr;
     grid-template-rows: 120fr 1230fr;
     grid-template-areas: 'nav header header' 'nav main aside';
     gap: 2.6rem;
+    border-radius: 23.065px;
 }
 
 #header {
@@ -26,7 +38,7 @@ body {
 #navbar {
     grid-area: nav;
     background: #fff;
-    border-radius: 10% 0 0 10%;
+    /* border-radius: 10% 0 0 10%; */
 }
 
 #aside {
@@ -165,6 +177,13 @@ header#header {
     background: #F3F0FF;
 }
 
+hr.nav-separator {
+    width: 65%;
+    background: #ECECEE;
+    border-width: 0.76px;
+    opacity: 0.2;
+}
+
 
 /* Contennt */
 
@@ -190,8 +209,6 @@ header#header {
 }
 
 #content .stats-card {
-    /* width: 50%;
-    margin: auto; */
     flex: 1;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -200,8 +217,25 @@ header#header {
     gap: 0.5rem;
 }
 
+.stats-card .paper {
+    background: #FFF2E9;
+}
+
+.stats-card .swap {
+    background: #EDE8FF;
+}
+
+.stats-card .profile {
+    background: #EAF9FF;
+}
+
+.stats-card .graph-card {
+    background: #FFEBEF;
+}
+
 .stats-card p:nth-child(1) {
-    margin-bottom: 0.188rem;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
     color: #92959E;
     font-family: AvertaStd-Bold;
     font-size: 0.7rem;
@@ -211,7 +245,7 @@ header#header {
 }
 
 .stats-card p:nth-child(2) {
-    margin-top: 0.188rem;
+    margin-top: 1rem;
     color: #15192C;
     font-family: Averta-Regular;
     font-size: 0.8rem;
@@ -224,7 +258,7 @@ header#header {
 .stats-card div:nth-child(1) {
     border-radius: 11.2px;
     padding: 1rem;
-    background: #FFF2E9;
+    /* background: #FFF2E9; */
     opacity: 0.65;
     line-height: 0;
     font-size: 0;
