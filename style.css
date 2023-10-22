@@ -468,3 +468,34 @@ hr.cards-searator {
         text-align: center;
     }
 }
+
+@media(max-width:768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'main' 'aside';
+        height: 100vh;
+        overflow: scroll;
+    }
+    header#header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1.625rem;
+    }
+    .title-section {
+        margin: auto;
+    }
+    .title-section h1 {
+        text-align: center;
+    }
+    .title-section p {
+        text-align: center;
+    }
+    #header .date {
+        padding: 1rem;
+    }
+    nav {
+        display: none;
+    }
+}
