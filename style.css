@@ -18,6 +18,7 @@ body {
     background: url(resources/body-bg.svg) no-repeat;
     background-size: 100vw 100vh;
     padding: 2.42rem 2.42rem 4.5rem 2.42rem;
+    /* overflow: auto; */
 }
 
 .container {
@@ -35,11 +36,7 @@ body {
     grid-template-areas: 'nav header header' 'nav main aside';
     gap: 2.6rem;
     border-radius: 23.065px;
-    overflow: hidden;
-}
-
-#header {
-    grid-area: header;
+    /* overflow: hidden; */
 }
 
 #navbar {
@@ -55,9 +52,14 @@ body {
 /* Header */
 
 header#header {
-    display: flex;
+    /* display: flex; */
+    position: sticky;
+    background: #F8F9FC;
+    top: 0;
     justify-content: space-between;
     padding-top: 0.625rem;
+    grid-area: header;
+    z-index: 99999;
 }
 
 #header .title-section h1 {
@@ -203,6 +205,7 @@ hr.nav-separator {
 }
 
 #content .top-numbers {
+    z-index: 1;
     flex: 55;
     display: flex;
     flex-direction: row;
@@ -396,8 +399,12 @@ hr.nav-separator {
 
 .side-section .header {
     display: flex;
+    position: sticky;
+    background: white;
+    top: -1rem;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 100000;
 }
 
 .card-h2-title {
@@ -471,11 +478,15 @@ hr.cards-searator {
 
 @media(max-width:768px) {
     .container {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 1fr;
         grid-template-areas: 'header' 'main' 'aside';
-        height: 100vh;
-        overflow: scroll;
+        grid-template-rows: 1fr 1fr 1fr; */
+        height: auto;
+        max-height: fit-content;
+        /* overflow: scroll; */
+        background: none;
     }
     header#header {
         display: flex;
@@ -497,5 +508,22 @@ hr.cards-searator {
     }
     nav {
         display: none;
+    }
+    #aside {
+        padding-right: 0;
+        height: 600px;
+    }
+    /* section.graph {
+        z-index: 1;
+        display: none;
+    } */
+    /* .top-numbers {
+        display: none;
+    } */
+    #aside:active {
+        position: relative;
+        max-height: 80vh;
+        top: -20rem;
+        z-index: 100;
     }
 }
