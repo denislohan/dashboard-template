@@ -404,7 +404,7 @@ hr.nav-separator {
     top: -1rem;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 100000;
+    z-index: 10;
 }
 
 .card-h2-title {
